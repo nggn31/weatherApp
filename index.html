@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-light justify-content-center">
+        <h2>WeatherApp</h2>
+    </nav>
+    
+    <div class="container">
+        <form id="search-form" class="mb-4">
+            <div class="form-group d-flex align-items-center">
+                <input
+                    type="text"
+                    id="cityname"
+                    class="form-control mr-2" 
+                    placeholder="Escribe el nombre de tu ciudad"
+                    required
+                />
+                <button type="submit" class="btn btn-search mr-2">Search</button> 
+                <button id="deleteCity" class="btn btn-delete">Delete</button> 
+            </div>
+        </form>
+
+        <div class="weather">
+            <img id="weatherIcon" src="" alt="Weather Icon" style="display: none; width: 50px; height: 50px;"/>
+            <p id="weatherDescription"></p>
+        </div>
+
+        <br />
+
+        <h2>Ciudad por defecto</h2>
+        <form id="addDefaultCities" class="mb-3">
+            <div class="form-group d-flex align-items-center">
+                <input
+                    type="text"
+                    id="defaultCitiesName"
+                    class="form-control mr-2" 
+                    placeholder="Escribe el nombre de la ciudad"
+                />
+                <button type="submit" id="send" class="btn btn-send mr-2">Add</button> 
+                <button id="deleteDefaultCities" class="btn btn-delete">Delete all</button> 
+            </div>
+        </form>
+
+        <div class="defaultCities row"></div>
+
+        <div class="hottestCity">
+            <h2>Ciudad más caliente:</h2>
+            <div id="hottestCityDisplay"></div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
